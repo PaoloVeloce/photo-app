@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  
-  devise_for :users
+  # for registrations look at my controllers and registrations first and the go to devise/registrations_controller.rb
+  devise_for :users, :controllers => { :registrations => 'registrations' }
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
