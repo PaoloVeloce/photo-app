@@ -11,7 +11,7 @@ class Payment < ActiveRecord::Base
   end
   
   def process_payment
-    customer = Stripe::customer.create email:email, card: token
+    customer = Stripe::Сustomer.create email :email, card: token
     
     Stripe::Charge.create customer: customer.id,
                           amount: 1000,
